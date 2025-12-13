@@ -8,7 +8,7 @@ string username = "petter"; //hårdkodat värde för användare
 string password = "abc123!"; //hårdkodat värde för lösenord till ovanstående användare
 float saldo = 10000F; //mängden pengar som Petter börjar med på saldot
 
-void MainMenu()
+void MainMenu() //startmenyn som "loopar" tills användaren har gjort ett giltigt val (1 eller 2)
 {
     Console.WriteLine("1. Logga in \n" +
                       "2. Avsluta");
@@ -16,7 +16,7 @@ void MainMenu()
     char choice = ChoseOption();
     if (choice == '1')
     {
-        Login();
+       Login();
     }
     else if (choice == '2')
     {
@@ -153,5 +153,5 @@ float WithdrawMoney()
     }
 }
 
-MainMenu();
+MainMenu(); //Startar programmet
 
