@@ -66,11 +66,13 @@ void OptionMenu(String username, String password) //tar emot de inskrivna värde
         case '1':
             {
                 saldo -= WithdrawMoney();
+                ShowSaldo();
                 break;
             }
         case '2':
             {
                 saldo += DepositMoney();
+                ShowSaldo();
                 break;
             }
         case '3':
@@ -151,6 +153,11 @@ float WithdrawMoney()
             Console.WriteLine("Error, du har skrivit in något annat än en positiv summa pengar.");
         }
     }
+}
+
+void ShowSaldo()
+{
+    Console.WriteLine($"Ditt saldo är: {saldo}");
 }
 
 MainMenu(); //Startar programmet
